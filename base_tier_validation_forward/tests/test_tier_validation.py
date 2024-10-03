@@ -21,10 +21,16 @@ class TierTierValidation(TransactionCase):
             TierDefinition,
             TierValidationTester,
             TierValidationTester2,
+            TierValidationTesterComputed,
         )
 
         cls.loader.update_registry(
-            (TierValidationTester, TierValidationTester2, TierDefinition)
+            (
+                TierValidationTester,
+                TierValidationTester2,
+                TierValidationTesterComputed,
+                TierDefinition,
+            )
         )
         cls.test_model = cls.env[TierValidationTester._name]
 
